@@ -1,0 +1,52 @@
+<section class="vh-100" style="background-color: #4B515D;">
+  <div class="container py-5 h-100">
+
+    <div class="row d-flex justify-content-center align-items-center h-100">
+
+
+
+      <div class="col-md-8 col-lg-6 col-xl-4">
+
+        <div class="input-group rounded">
+          <input #MyInput  type="search" (keyup.enter)="doSearch(MyInput.value)"  class="form-control rounded" placeholder="Search" aria-label="Search"
+                 aria-describedby="search-addon" />
+          <span class="input-group-text border-0"  id="search-addon">
+            <i (click)="doSearch(MyInput.value)" class="fas fa-search"></i>
+          </span>
+        </div>
+
+      <br>
+
+
+        <br>
+        <br>
+        <div class="card" style="color: #4B515D; border-radius: 35px;">
+          <div class="card-body p-4">
+            <div class="d-flex">
+              <h6 class="flex-grow-1">{{name}}</h6>
+              <h6>{{time}} </h6>
+            </div>
+
+            <div class="d-flex flex-column text-center mt-5 mb-4">
+              <h6 class="display-4 mb-0 font-weight-bold" style="color: #1C2331;"> {{temp}}°C </h6>
+              <span class="small" style="color: #868B94"> {{weather[0].main}}</span>
+            </div>
+
+            <div class="d-flex align-items-center">
+              <div class="flex-grow-1" style="font-size: 1rem;">
+                <div><i class="fas fa-wind fa-fw" style="color: #868B94;"></i> <span class="ms-1"> {{speed}} km/h </span></div>
+                <div><i class="fas fa-tint fa-fw" style="color: #868B94;"></i> <span class="ms-1"> {{humidity}} % </span></div>
+                <div><i class="fas fa-sun fa-fw" style="color: #868B94;"></i> <span class="ms-1"> 0.2h   </span></div>
+              </div>
+              <div *ngIf="weather[0].main == 'Clouds'">
+                <img src="https://mdbootstrap.com/img/Photos/new-templates/bootstrap-weather/ilu1.png" width="100px">
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</section>
