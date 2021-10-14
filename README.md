@@ -1,3 +1,11 @@
+A simple application that shows wheather forecast for a specific city. It uses Angular as Front End, Bootstrap and FontAwesome as UI/UX and the API provided by OpenWeather platform to get current data. 
+In order to create a similar app you should do the following steps:
+1- Crate an Angular app : ng new Weather-app
+2- install BootStrap : npm install bootstrap
+3- install the free version of fontawesome : npm install @fortawesome/fontawesome-free
+4- get your free API-Key from the official website OpenWeather: https://openweathermap.org/api
+5- Enhance your application to request, subscribe and display the data.  
+
 # Weather
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 11.0.2.
